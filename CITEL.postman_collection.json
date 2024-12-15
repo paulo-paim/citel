@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "f07e3529-de48-48f5-a60b-d0ab678df9ec",
+		"name": "CITEL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34747247"
+	},
+	"item": [
+		{
+			"name": "Listar Pessoas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/pessoa"
+			},
+			"response": []
+		},
+		{
+			"name": "Pessoas Por Estado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/pessoas-por-estado"
+			},
+			"response": []
+		},
+		{
+			"name": "IMC Por Faixa Etaria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/imc-por-faixa-etaria"
+			},
+			"response": []
+		},
+		{
+			"name": "Obesidade entre Homens e Mulheres",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/percentual-obesidade"
+			},
+			"response": []
+		},
+		{
+			"name": "Média Idade Por Tipo Sanguineo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/media-idade-tipo-sanguineo"
+			},
+			"response": []
+		},
+		{
+			"name": "Média Idade Por Tipo Sanguineo Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf\" : \"004.189.830-38\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/pesquisar-doadores"
+			},
+			"response": []
+		}
+	]
+}
