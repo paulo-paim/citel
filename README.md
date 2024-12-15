@@ -53,3 +53,6 @@ Mesmo implementando o modelo MVC tive problemas devido a quantidade de arquivos 
 
 - Normalização dos Dados
 Apesar de uma única tabela ter sido capaz de lidar com os dados, o melhor seria aplicar as regras de normalização de dados para separar as informações.  
+
+- Tratamento de Erros (404, 500, etc)
+Um ponto bastante importante que pensei após a finalização dos endpoints foi no tratamento de erros. Uma melhoria seria implementar as respostas para erros do tipo 404 (not found) e 500 (internal server error) para tratar os retornos para a aplicação.
