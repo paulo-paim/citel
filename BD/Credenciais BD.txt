@@ -1,2 +1,4 @@
 user = root
 password = mysql
+
+host: localhost:3306
