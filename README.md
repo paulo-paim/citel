@@ -40,19 +40,28 @@ Após a criação do banco, realizei o insert dos dados que vieram em formato JS
 
 A implementação da API iniciou-se definindo as camadas do projeto. Segui a separação do modelo MVC, na qual os controllers lidam com as requisições HTTP, os Services implementam a lógica de negócio e os Repositories fazem o acesso a base de dados.
 
-# FrontEnd
+
+# Lógica de negócio
+Toda a lógica de negócio encontra-se implementada na classe service. 
+Ela deve receber a solicitação do controller, buscar os dados necessários, trata-los adequadamente e retornar para o controller.
+Neste sentido, um ponto de melhoria que poderia ser implementado no projeto seria a simplificação das querys executadas na base de dados e uma maior manipulação de dados dentro da API. Com isto o banco de dados não sofreria uma carga com selects complexos e a lógica ficaria sob responsabilidade da classe service.
+
 
 # Melhorias
 
 Desenvolvendo o projeto pensei em alguns pontos que poderiam ser melhorados:
-- Chave Primaria da tabela
+- Chave Primaria da tabela:
 Notei a necessidade de implementar uma chave primária que fosse um campo numérico, pois utilizei a chave primária como String. Em um cenário real deveria transformar o campo CPF (chave primária candidata) no tipo numérico e utiliza-lo como PK. Outra possibilidade seria implementar uma estratégia de geração de Ids, comumente utilizada em projetos.
 
-- Melhor organização dos arquivos
+- Melhor organização dos arquivos:
 Mesmo implementando o modelo MVC tive problemas devido a quantidade de arquivos que foram gerados. No final do projeto notei que se adotasse a abordagem de arquitetura VSA (vertical slice architecture) em conjunto com o MVC obteria uma melhor organização e simplicidade do projeto.
 
-- Normalização dos Dados
+- Normalização dos Dados:
 Apesar de uma única tabela ter sido capaz de lidar com os dados, o melhor seria aplicar as regras de normalização de dados para separar as informações.  
 
-- Tratamento de Erros (404, 500, etc)
+- Tratamento de Erros (404, 500, etc):
 Um ponto bastante importante que pensei após a finalização dos endpoints foi no tratamento de erros. Uma melhoria seria implementar as respostas para erros do tipo 404 (not found) e 500 (internal server error) para tratar os retornos para a aplicação.
+
+# FrontEnd
+Infelizmente não tive tempo para desenvolver o frontend da aplicação para expor as informações da API. 
+Caso ganhe mais tempo, posso desenvolver a integração com o frontend.
